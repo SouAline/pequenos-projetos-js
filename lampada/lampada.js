@@ -1,5 +1,4 @@
-const turnOn = document.getElementById("turnOn")
-const turnOff = document.getElementById("turnOff")
+const turnOnOff = document.getElementById("turnOnOff")
 const lamp = document.getElementById("lamp")
 
 function isLampBroken() {
@@ -24,8 +23,19 @@ function lampBroken() {
     }
 }
 
-turnOn.addEventListener("click", lampOn)//quando clicar vai chamar o metodo que faz a lampada ligar
-turnOff.addEventListener("click", lampOff)
+function lampOnOff() {
+    if (!isLampBroken()) {
+        if (turnOnOff.textContent == "LIGAR") {
+            lampOn()
+            turnOnOff.textContent = "DESLIGAR"//MUDA O TEXTO DO BOTÃO PARA DESLIGADO
+        } else {
+            lampOff()
+            turnOnOff.textContent = "LIGAR"
+        }
+    }
+}
+
+turnOnOff.addEventListener("click", lampOnOff)//quando clicar vai chamar o metodo que faz a lampada ligar
 lamp.addEventListener("mouseover", lampOn)
 lamp.addEventListener("mouseleave", lampOff)
 lamp.addEventListener("dblclick", lampBroken)
