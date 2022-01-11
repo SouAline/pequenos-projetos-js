@@ -11,7 +11,7 @@ modal {
 
 .modal.active {
   opacity: 1;
-  z-index: 1;
+  z-index: 1; /*trás na frente de todos quando ativo*/
 }
 
 .modal-content {
