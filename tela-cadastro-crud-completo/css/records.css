@@ -1,0 +1,12 @@
+.records {
+  width: 100%;
+  user-select: none;
+  text-align: left;
+}
+
+.records th {
+  height: 50px;
+  background-color: var(--primary-color);
+  padding-left: 20px;
+  font-size: 1.2rem;
+}
